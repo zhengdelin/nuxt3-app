@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "nuxt": "^3.2.2",
+    "nuxt-windicss": "^2.6.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "@kyvg/vue3-notification": "^2.9.0",
+    "@pinia/nuxt": "^0.4.7",
+    "@types/node": "^18.14.1",
+    "axios": "^1.3.4",
+    "pinia": "^2.0.32"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
