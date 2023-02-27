@@ -6,7 +6,7 @@ export function injectImageAPI(query: QueryHandlers, app: NuxtApp) {
     getFileServer: () => query.get("/files"),
     upload: (data: any, config: CancelableProgressQueryConfig) => {
       const fileServerAxios = useAxios(data.fileServer, app);
-      return fileServerAxios.post(`/cdn/1/upload/image?server=${`https://taostyler-api.coding-life.com.tw`}`, data.data, {
+      return fileServerAxios.post(`/cdn/1/upload/image?server=${``}`, data.data, {
         onUploadProgress(progressEvent) {
           config.onProgress(getUploadProgress(progressEvent));
         },

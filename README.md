@@ -1,4 +1,4 @@
-Nuxt3 + ts + pinia + windicss + eslint + prettier + axios + vue-notifications
+# Nuxt3 + ts + pinia + windicss + scss + eslint + prettier + axios + vue-notifications
 
 # Nuxt 3 Minimal Starter
 

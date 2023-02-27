@@ -1,14 +1,12 @@
 // https://pinia.vuejs.org/ssr/nuxt.html
 
 /**
- * *設定package.json
+ * *配置package.json
  * "overrides": {
     "vue": "latest"
    }
- */
-
-/**
- * *設定nuxt.config.ts
+ *
+ * *配置nuxt.config.ts
  * modules: ["@pinia/nuxt"],
  * pinia: {
     autoImports: ["defineStore", "storeToRefs"],

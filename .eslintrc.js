@@ -1,18 +1,16 @@
 /**
- * *nuxt3，vue3提供plugin
- * npm i -D @nuxtjs/eslint-config-typescript eslint-plugin-vue
- */
-/**
+ * *nuxt3，vue3提供plugin，支持ts的分析器
+ * npm i -D eslint @nuxtjs/eslint-config-typescript eslint-plugin-vue @typescript-eslint/eslint-plugin @typescript-eslint/parser
+ *
  * *結合prettier必須安裝
  * npm i -D prettier eslint-plugin-prettier eslint-config-prettier
- * @setting 設定：
+ * *配置
  * extends:["prettier"],
  * plugins:["prettier"],
  * rules:{
  *  "prettier/prettier": "error",
  * }
- */
-/**
+ *
  * 測試eslint用
  * package.json
  * "lint": "eslint ."
@@ -31,11 +29,11 @@ module.exports = {
     "prettier",
   ],
   overrides: [],
-  // parser: "@typescript-eslint/parser",
-  // parserOptions: {
-  //   ecmaVersion: "latest",
-  //   sourceType: "module",
-  // },
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
     "vue/multi-word-component-names": 0,
