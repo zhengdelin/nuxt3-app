@@ -1,4 +1,4 @@
-type KeyType = string | number | symbol;
+export {};
 
 interface KeyHandler<T, U> {
   (item: T): U;
@@ -10,9 +10,9 @@ interface ResolveHandler<T, K> {
 
 declare global {
   interface Array<T> {
-    groupBy<U extends KeyType>(keyHandler: KeyHandler<T, U>): { [key in U]: T[] };
-    mapBy<U extends KeyType>(keyHandler: KeyHandler<T, U>): { [key in U]: T };
-    mapByResolve<U extends KeyType, K>(keyHandler: KeyHandler<T, U>, resolveHandler: ResolveHandler<T, K>): { [key in U]: K };
+    groupBy<U extends keyof any>(keyHandler: KeyHandler<T, U>): { [key in U]: T[] };
+    mapBy<U extends keyof any>(keyHandler: KeyHandler<T, U>): { [key in U]: T };
+    mapByResolve<U extends keyof any, K>(keyHandler: KeyHandler<T, U>, resolveHandler: ResolveHandler<T, K>): { [key in U]: K };
   }
 }
 
@@ -62,5 +62,3 @@ Array.prototype.mapByResolve = function (keyHandler, resolveHandler) {
   }
   return map;
 };
-
-export default defineNuxtPlugin(() => {});

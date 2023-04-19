@@ -42,5 +42,7 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 
     "no-extend-native": ["error", { exceptions: ["Array"] }],
+
+    "vue/no-multiple-template-root": 0,
   },
 };

@@ -37,10 +37,20 @@ export default defineNuxtConfig({
   },
 
   // You can define the CSS files/modules/libraries you want to set globally (included in every page).
-  css: ["~/assets/css/app.scss"],
+  css: ["~/assets/styles/app.scss"],
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/styles/global.scss" as *;',
+        },
+      },
+    },
+  },
 
   // An array of nuxt app plugins.
-  plugins: ["~/plugins/array"],
+  plugins: [],
 
   modules: ["@pinia/nuxt", "nuxt-windicss"],
 
