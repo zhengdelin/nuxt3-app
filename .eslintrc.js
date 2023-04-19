@@ -44,5 +44,6 @@ module.exports = {
     "no-extend-native": ["error", { exceptions: ["Array"] }],
 
     "vue/no-multiple-template-root": 0,
+    "require-await": 0,
   },
 };
